@@ -1,0 +1,73 @@
+page-choiceofperference {
+    .button-box{
+        position: absolute;
+        width: 64px;
+        height: 15px;
+        top: 29px;
+        // white-space: nowrap;      
+        font-size: .3rem;
+        overflow: hidden;
+    text-overflow: ellipsis;
+}
+    ion-row {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-left: -2px;
+      
+        }
+        .col-style
+        {
+            display: flex !important;
+            justify-content: center !important;
+        }
+    .checkbox-style{
+        margin-left: -4px;
+        margin-top: -4px;
+      }
+.para-text-div-box{
+    margin-top: 88px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+.card-box{
+   
+    width: 81px;
+    margin-left: -4px;
+    text-align: center;
+    align-items: center;
+    height: 76px;
+ 
+    // height: 73px;
+    // width: 81px;
+    // margin-left: -4px;  
+}
+.div-box{
+    border: 1px solid white;
+height: 19px;
+width: 65px;
+margin-top: -65px;
+margin-left: 6px;
+padding: 3px;
+position: relative;
+}
+.para-text{
+    color: white;
+    font-size: 3px;
+    font-family: noto-sans;
+    text-align: center;
+    font-weight: bolder
+    
+
+}
+.div-check-box{
+    height: 19px;
+width: 20px;
+border: 1px solid white;
+margin-top: 16px;
+margin-left: 15px;
+border-radius: 11px;
+padding: 2px;
+}
+}

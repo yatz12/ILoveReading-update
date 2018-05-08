@@ -14,3 +14,36 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.no-scroll .scroll-content{
+    overflow: hidden;
+}
+.scroll-content {
+   
+   margin-top: 0px !important;
+padding-bottom:0px !important;
+  }
+  .popover-wrapper .popover-content {
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.25);
+}
+.toolbar-title-ios {
+    font-family: "Noto Sans";
+  }
+  
+  .toolbar-title-md {
+    font-family: "Noto Sans";
+  }
+  
+  .toolbar-title-wp {
+    font-family:"Noto Sans";
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #424242;
+}
+
+
+.menu-style .menu-inner {
+    width: 324px;
+}

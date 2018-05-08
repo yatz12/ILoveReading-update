@@ -1,14 +1,50 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding >
+  <ion-grid>
+     <ion-row>
+        <ion-col width-20>
+           <div class="language-box" >
+              <ion-row>
+                 <ion-col>
+                    <p class="language-box-p" >ENG</p>
+                 </ion-col>
+                 <ion-col>
+                    <img src="assets/imgs/001-arrows.png" >
+                 </ion-col>
+              </ion-row>
+           </div>
+        </ion-col>
+        <ion-col width-80>
+           <ion-row>
+              <ion-col width-50>
+                 <p class="font-box-text">Font Size</p>
+              </ion-col>
+              <ion-col width-50>
+                 <div class="font-box">
+                    <div class="add-box">
+                       <ion-icon style="margin-left: 3px;"  ios="ios-add" md="md-add"></ion-icon>
+                    </div>
+                    <div class="sub-box">
+                       <ion-icon style="color: white;margin-left: 3px;" ios="ios-remove" md="md-remove"></ion-icon>
+                    </div>
+                 </div>
+              </ion-col>
+           </ion-row>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
+  <ion-row style="margin-top: 143px;">
+     <p style="color: white;
+        font-size: 25px;">Welcome On Board</p>
+     <img style="height: 55px;    margin-top: -20px;" src="assets/imgs/logo.jpg">
+  </ion-row>
+  <ion-row style="    position: absolute;
+  bottom: 2px;
+  width: 90%;">
+     <ion-col>
+        <button style="width: 100%;" color="danger" ion-button (click)="navigatetologin()" >Login</button>
+     </ion-col>
+     <ion-col>
+        <button  style="width: 100%;" ion-button (click)="navigatetoSignup()" >Sign Up</button>
+     </ion-col>
+  </ion-row>
 </ion-content>

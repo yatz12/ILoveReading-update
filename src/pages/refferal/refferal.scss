@@ -1,0 +1,40 @@
+page-refferal {
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 20px;
+        margin-right: 9px;
+    }
+    .heading-title{
+        margin-top: 62px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500; 
+    }
+    .div-box1{
+        display: block;
+        width: 100%;
+        height:42px;
+       
+    }
+    .div-box2{
+        display: inline-block;
+        width: 20%;
+        height:42px;
+       
+        float: left; 
+    }
+    .div-box3{
+        display:inline-block;
+        width: 78%;
+        height:42px;
+     
+        float: left; 
+    }
+
+}

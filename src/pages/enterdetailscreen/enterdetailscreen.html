@@ -1,0 +1,104 @@
+<!--
+  Generated template for the EnterdetailscreenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+<p class="text-para" >We like to know you better</p>
+<div style="    text-align: center;    object-fit: cover;
+" (click)="uploadpicture()">
+  
+<img class="image-profile" [src]="image" >
+
+</div>
+<ion-list style="    margin-top: 2px;" >
+      
+    <ion-item>
+      <ion-label floating>Profession</ion-label>
+      <ion-select [(ngModel)]="student" interface="popover" >
+     <ion-option value="1">Student </ion-option>
+     <ion-option value="2">Teacher </ion-option>
+     <ion-option value="3">Parent </ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <form [formGroup]="validation">
+
+    <ion-item>
+      <ion-label floating>First Name</ion-label>
+      <ion-input  type="text"   formControlName="FirstName" 
+
+      [class.invalid]="!validation.controls.FirstName.valid && (validation.controls.FirstName.dirty|| submitAttempt)"
+          ></ion-input>
+      
+      
+      
+        </ion-item>
+      <p *ngIf="!validation.controls.FirstName.valid && (validation.controls.FirstName.dirty|| submitAttempt)" style="color:red ">*Please enter a valid FirstName.</p>
+    <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        
+        <ion-input  type="text"   formControlName="LastName" 
+
+        [class.invalid]="!validation.controls.LastName.valid && (validation.controls.LastName.dirty|| submitAttempt)"
+            ></ion-input>
+        
+        
+        
+          </ion-item>
+        <p *ngIf="!validation.controls.LastName.valid && (validation.controls.LastName.dirty|| submitAttempt)" style="color:red ">*Please enter a valid LastName.</p>
+     
+    
+      <ion-item>
+        <ion-label floating>Phone</ion-label>
+        <ion-input  type="text"   formControlName="PhoneNo" 
+
+        [class.invalid]="!validation.controls.PhoneNo.valid && (validation.controls.PhoneNo.dirty|| submitAttempt)"
+            ></ion-input>
+        
+        
+        
+          </ion-item>
+        <p *ngIf="!validation.controls.PhoneNo.valid && (validation.controls.PhoneNo.dirty|| submitAttempt)" style="color:red ">*Please enter a valid PhoneNo.</p>
+      <ion-item>
+          <ion-label floating>Email Id</ion-label>
+          <ion-input  type="text"   formControlName="Email_Id" 
+
+          [class.invalid]="!validation.controls.Email_Id.valid && (validation.controls.Email_Id.dirty|| submitAttempt)"
+              ></ion-input>
+          
+          
+          
+            </ion-item>
+          <p *ngIf="!validation.controls.Email_Id.valid && (validation.controls.Email_Id.dirty|| submitAttempt)" style="color:red ">*Please enter a valid Email_id.</p>
+        <ion-item>
+            <ion-label floating>Age</ion-label>
+            <ion-input  type="text"   formControlName="Age" 
+
+            [class.invalid]="!validation.controls.Age.valid && (validation.controls.Age.dirty|| submitAttempt)"
+                ></ion-input>
+            
+            
+            
+              </ion-item>
+ <p *ngIf="!validation.controls.Age.valid && (validation.controls.Age.dirty|| submitAttempt)" style="color:red ">*Please enter a valid Age.</p>
+
+</form>
+          <ion-item>
+              <ion-label floating>Gender</ion-label>
+                   <ion-select [(ngModel)]="gender"  interface="popover"> 
+                     <ion-option value="1" >Male</ion-option>
+                     <ion-option value="2" >Female</ion-option>
+                     <ion-option value="3" >Other</ion-option>
+                    </ion-select>      
+            </ion-item>
+  
+  </ion-list>
+
+
+<button  [disabled]="!validation.valid" class="login-text" ion-button full color="danger" (click)="navigatetoschooldetails()">Next</button>
+</ion-content>

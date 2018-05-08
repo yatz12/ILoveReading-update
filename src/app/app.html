@@ -1,1 +1,224 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-menu [content]="content"  side="left" id="menu1" >
+<div style="width: 111%;height: 100%;position: relative;z-index: 1;" >
+    <ion-content style="color:white; position: absolute;z-index: 10">
+      <ion-list>
+         <img src="assets/imgs/abc.png" >  
+
+      </ion-list>
+      <div style="height: 81px;
+      width: 82px;
+      background-color: black;
+      position: absolute;
+      margin-top: -69px;
+      margin-left: 25px;
+      border-radius: 45px;
+      border: 2px solid white;">
+
+      </div>
+      <p style="    color: black;
+      margin-left: 112px;
+      font-size: 15px;
+      margin-top: -15px;">Shansak Tyagi</p>
+      <p style="    margin-left: 112px;
+      margin-top: -13px;
+      font-size: 9px;
+      color: grey;">abc@gmail.com</p>
+
+      <div >
+        <img style="    height: 34px;
+        margin-left: 17px;" src="assets/imgs/i.png" >
+      </div>
+     <p style="    color: #00ff68;
+     margin-left: 58px;
+     margin-top: -36px;">Active Subscription</p>
+     <p style="    color: red;
+     margin-left: 59px;
+     margin-top: -14px;
+     font-size: 9px;" >Valid Upto 22Feb 2019</p>
+     <!-- <img src="assets/imgs/i.png" > -->
+      <ion-list no-lines >
+        <button menuClose="menu1" ion-item *ngFor="let p of pages;let i=index" (click)="openPage(p)" style="background: transparent;color: grey;padding-left: 30px;">
+          <img src="{{p.logo}}" style="      margin-bottom: -4px;  width: 24px !important;margin-right: 20px;width: 30px;color: grey;">{{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+  </div>
+</ion-menu>
+<ion-menu [content]="content" class="menu-style" side="right" id="menu2" width="335">
+  <!-- <ion-content>
+    <ion-list>
+      <button ion-item  menuClose="menu2" detail-none>
+        Close Menu 2
+      </button>
+    </ion-list>
+  </ion-content> -->
+  <ion-header>
+
+    <ion-navbar color="dark">
+      <!-- <button ion-button menuClose="menu2" >
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>  -->
+      <!-- <ion-buttons end>
+        <button ion-button menuClose="menu2">
+          <ion-icon mode="ios" name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons> -->
+      <div style="margin-top: -16px;
+      height: 17px;
+      width: 20px;
+      position: absolute;
+      top: 37px;" menuClose="menu2" >
+      <img style="width: 18px;" src="assets/imgs/icons/arrows.png">
+      </div>
+      <ion-title start style="       margin-left: 24px; font-family: Noto sans-serif;">
+         iMagazines
+      </ion-title>
+  
+      <div class="nav-bar-style">
+        <img  class="nav-bar-img" src="assets/imgs/share.png">
+        <img  class="nav-bar-img" src="assets/imgs/favorite.png">
+        <img  class="nav-bar-img" src="assets/imgs/comment.png">
+        <img  class="nav-bar-img" src="assets/imgs/search.png">
+        <img  class="nav-bar-img" src="assets/imgs/menu.png">
+      </div>
+  
+  
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+   <div style="    margin-top: 62px;" >
+    <button menuClose="menu2" [style.background-color]="p.color" *ngFor="let p of pages1;let i=index" class="but-height" ion-button full   style="height: 43px; margin-top:12px;" (click)="openPage1(p,p.type)">
+     <div>
+      <img style="width: 23px;" src="{{p.logo}}">
+     </div>
+      <ion-label>{{p.title}}</ion-label>
+      </button>
+      <!-- <button class="but-height" icon-start color="dark" ion-button full  style="height: 43px;" (click)="choosedailypost(0)">
+          <div>
+              <img style="width: 23px;" src="assets/imgs/icons/calendar-icon.png">
+             </div>
+              <ion-label>EVENTS</ion-label>
+          </button>
+    <button  class="but-height" ion-button full  item-end icon-left style="height: 43px;background-color:#6B407F" (click)="choosedailypost(0)">
+              <div>
+                  <img style="width: 23px;" src="assets/imgs/icons/design.png">
+                 </div>
+                  <ion-label>NATURE OF CONTENT</ion-label>
+        </button>
+     <button class="but-height" ion-button full  item-end icon-left style="height: 43px;background-color:#69BAAE" (click)="choosedailypost(0)">
+                  <div>
+                      <img style="width: 23px;" src="assets/imgs/icons/documents-button.png">
+                     </div>
+                      <ion-label>TEXT TYPE</ion-label>
+         </button>
+         <button class="but-height"  ion-button full  item-end icon-left style="background-color:#ECA437;height: 43px;" (click)="choosedailypost(3)">
+      <div>
+        <img style="width: 23px;" src="assets/imgs/icons/tree-of-dots-foliage.png">
+          </div>
+       <ion-label>QUOTE OF THE DAY</ion-label>
+       </button>
+                    
+          <button class="but-height"  ion-button full  item-end icon-left style="height: 43px;background-color:#174972" (click)="choosedailypost(1)">
+     <div>
+      <img style="width: 23px;" src="assets/imgs/icons/browser.png">
+       </div>
+      <ion-label>WORD OF THE DAY</ion-label>
+      </button>
+    <button class="but-height" ion-button full  item-end icon-left style="height: 43px;background-color:#8599A7" (click)="choosedailypost(2)">
+     <div>
+      <img style="width: 23px;" src="assets/imgs/icons/i.png">
+      </div>
+     <ion-label>IDOM OF THE DAY</ion-label>
+   </button>
+     <button class="but-height" ion-button full  item-end icon-left style="height: 43px;background-color:#9B92AE" (click)="choosedailypost(0)">
+      <div>
+      <img style="width: 23px;" src="assets/imgs/icons/favorite-heart-button.png">
+         </div>
+    <ion-label>SAVE FAVOURITE</ion-label>
+     </button>
+     <button class="but-height" ion-button full  item-end icon-left style="height: 43px;background-color:#9B583A" (click)="choosedailypost(0)">
+         <div>
+       <img style="width: 23px;" src="assets/imgs/icons/megaphone.png">
+             </div>
+        <ion-label>OUR VOICES</ion-label>
+             </button>
+       <button class="but-height" ion-button full  item-end icon-left style="height: 43px;background-color:#CC212D;" (click)="choosedailypost(0)">
+       <div>
+         <img style="width: 23px;" src="assets/imgs/icons/gift.png">
+                    </div>
+            <ion-label>POINTS EARNED</ion-label>
+     </button> -->
+  </div>
+  </ion-content>
+
+
+<style>
+  .read-text{
+    color: red;
+    font-style: italic;
+}
+    .text-pstyle{
+    font-size: 11px;
+    color:white;
+    margin-top: 3px;
+    margin-left: 10px; 
+}
+    .nav-bar-style{
+    display: block;
+    text-align: right;
+    margin-top: -22px;
+    margin-right: 9px;
+}
+.nav-bar-img{
+    display: inline-block;
+    height: 13px;
+    margin-right: 9px;
+}
+
+.card-style{
+    margin-top: 39px;
+    width: 111%;
+    margin-left: -15px;
+}
+.card-content-md {
+    padding: 0px 16px !important;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+.card-title{
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 17px;
+    margin-top: 11px; 
+}
+.text-box{
+    height: 22px;
+    background-color: rgba(0, 0,0,.5);
+    position: absolute;
+    width: 274px;
+    top: 233px; 
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-menu>

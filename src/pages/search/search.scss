@@ -1,0 +1,43 @@
+page-search {
+.search-box{
+    margin-top:32px;
+    margin-top: 54px;
+    background-color: #e6e2e2;
+    height: 42px;
+    border: 1px solid #bfbdbd;
+    text-align:right;
+}
+.title-box{
+    text-align: right;
+    margin-top: -20px;
+    margin-right: 25px;
+  
+}
+.icon-box{
+    position: absolute;  
+      top: 81px;
+    right: 28px;
+}
+.input-box{
+    margin-top: 10px;
+    margin: 0px;
+}
+.segment-box{
+    height: 75px;
+    font-size: .7rem;
+    padding: 13px;   
+}
+.div-text-box{
+    
+    display: inline-block;
+    width: 48%;
+    height: 127px;
+    float: left;
+}
+.div-text-bigbox{
+    display: block;
+    width: 100%;
+    height: 127px;
+  
+}
+}

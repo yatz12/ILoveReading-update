@@ -1,0 +1,39 @@
+<!--
+  Generated template for the UserloginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+<div style="margin-top: 76px;">
+  <p class="login-text" >Log In</p>
+  <p style="color: grey;margin-top: -42px;">to user existing account</p>
+</div>
+
+<ion-list>
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"  ></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+<div>
+  <p class="foget-password" (click)="forgot()" >Forgot Username or Password?</p>
+</div>
+<!-- <div>
+    <re-captcha (resolved)="captchaResolved($event)" siteKey="6LeZslMUAAAAADgROpzCAPRXN4FH6LdvFQ9CjPHY"></re-captcha>
+ 
+   
+</div> -->
+
+<button class="login-text" ion-button full color="danger" (click)="navigateToLogin()" >Log In</button>
+</ion-content>

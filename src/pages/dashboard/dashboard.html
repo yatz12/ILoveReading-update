@@ -1,0 +1,66 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+      <!-- <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button> -->
+    <ion-title>
+      <div style="width:37%">
+      <img class="logo-box" src="assets/imgs/logo.jpg">
+     </div>
+      <div style="text-align: end;
+      margin-top: -33px;margin-right: 13px;">
+      <ion-icon class="search-box" ios="ios-search" md="md-search"></ion-icon>
+    </div>   
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<p class="magazine-box" >Select Magazines</p>
+<p class="subscribe-text" >that you subscribe</p>
+ <div class="slider-box" >
+   <div class="slider-arrow">
+      <ion-icon class="slider-arrow-icon" name="ios-arrow-back"></ion-icon>
+   </div>
+   <div class="slider-card">
+ <div class="slider-inner-card" >
+<div class="slider-card-box" (click)="tapcard(i)" *ngFor="let cards of magazine_list;let i=index" >
+<ion-card class="card-box"   id="x_{{i}}">
+<img [src]=cards.image>
+</ion-card>
+</div>
+
+<!-- <div class="slider-card-box" (click)="tapcard(2)" >
+  <ion-card class="card-box"  id="tap2" >
+  
+</ion-card>
+</div>
+
+ <div class="slider-card-box"  (click)="tapcard(3)"  >
+    <ion-card class="card-box" id="tap3">
+    
+  </ion-card>
+  </div>
+  -->
+</div>
+    
+
+    </div>
+    <div class="slider-arrow">
+        <ion-icon class="slider-arrow-icon" name="ios-arrow-forward"></ion-icon>
+   </div>
+ 
+
+  </div>
+ 
+<button [disabled]="buttonDisabled" ion-button color="danger" class="button-box" full (click)="next()">Next</button>
+</ion-content>

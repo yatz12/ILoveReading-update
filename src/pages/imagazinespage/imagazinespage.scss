@@ -1,0 +1,50 @@
+page-imagazinespage {
+.read-text{
+    color: red;
+    font-style: italic;
+    // position: absolute;
+    // top: 307px;
+    // left: 146px;
+}
+    .text-pstyle{
+    font-size: 11px;
+    color:white;
+    margin-top: 3px;
+    margin-left: 10px; 
+}
+    .nav-bar-style{
+    display: block;
+    text-align: right;
+    margin-top: -22px;
+    margin-right: 9px;
+}
+.nav-bar-img{
+    display: inline-block;
+    height: 13px;
+    margin-right: 9px;
+}
+
+.card-style{
+    margin-top: 39px;
+    width: 111%;
+    margin-left: -15px;
+}
+.card-content-md {
+    padding: 0px 16px !important;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+.card-title{
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 17px;
+    margin-top: 11px; 
+}
+.text-box{
+    height: 22px;
+    background-color: rgba(0, 0,0,.5);
+    position: absolute;
+    width: 274px;
+    top: 233px; 
+}
+}

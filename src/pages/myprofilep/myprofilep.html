@@ -1,0 +1,114 @@
+<!--
+  Generated template for the MyprofilepPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark" >
+        <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+    <ion-title>My Profile</ion-title>
+    <div class="title-box" >
+        <img style="max-width: 17px;" src="assets/imgs/draws.png">
+     </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding  >
+
+<div class="div-image-box">
+ <div class="div-image-round">
+
+ </div>
+ <p style="font-size: 17px;
+ font-weight: 700;"  >{{userdata.username}}</p>
+<!-- <p  style="color: #c5c1c1;
+margin-top: -14px;
+font-size: 12px;
+" >Graphic Designer</p> -->
+</div>
+
+<div class="div-box" >
+<div class="div-box1" >
+    <img style="    height: 34px;    margin-top: 10px;
+    " src="assets/imgs/i.png" >
+  
+</div>
+<div class="div-box2" >
+<p style=" color: #07ab07;
+margin-left: 5px;" >Active Subscription</p>
+<p style="    margin-top: -16px;
+margin-left: 5px;
+font-size: 10px;
+color: red;" >valid Until 22 Feb 2018</p>
+
+</div>
+</div>
+
+ <div class="div-box9" >
+
+<div class="div-box4">
+<p style="    font-weight: 500;" >Email:</p>
+</div>
+
+<div class="div-box5">
+    <p>{{userdata.email}}</p>
+    </div>
+    <div class="div-box6">
+    <img style="max-width: 18px;
+    margin-top: 13px;    width: 12px;" src="assets/imgs/draw.png">
+</div>
+ </div>
+ <div class="div-box9" >
+
+    <div class="div-box4">
+    <p style="    font-weight: 500;" >Phone:</p>
+    </div>
+    
+    <div class="div-box5">
+        <p>{{userdata.phone}}</p>
+        </div>
+        <div class="div-box6">
+        <img style="max-width: 18px;
+        margin-top: 13px;    width: 12px;" src="assets/imgs/draw.png">
+    </div>
+     </div>
+
+     <div class="div-box9" >
+
+        <div class="div-box4">
+        <p style="    font-weight: 500;" >Addrees:</p>
+        </div>
+        
+        <div class="div-box5">
+            <p style="margin-top: 15px;" >{{userdata.school_address}}</p>
+            </div>
+            <div class="div-box6">
+            <img style="max-width: 18px;
+            margin-top: 13px;    width: 12px;" src="assets/imgs/draw.png">
+        </div>
+         </div>
+         <div class="div-box9" >
+
+            <div class="div-box4">
+            <p style="    font-weight: 500;    " >Points Earned:</p>
+            </div>
+            
+            <div class="div-box8">
+                <p>5500 points</p>
+                </div>
+                <div class="div-box7">
+               <p style="color: white;
+               font-size: 10px;
+               text-align: center;
+               margin-top: 6px;" >Reedem Points</p>
+            </div>
+             </div>
+
+
+</ion-content>

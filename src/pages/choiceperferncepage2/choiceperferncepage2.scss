@@ -1,0 +1,54 @@
+page-choiceperferncepage2 {
+    ion-row {
+        text-align: center;
+        }
+    .checkbox-style{
+    margin-left: -4px;
+    margin-top: -4px;
+  }
+  
+
+
+  .button-style{
+    POSITION: absolute;
+    bottom: 55px;
+    right: 19px;
+    width: 88%;
+  }
+  
+    .para-text-div-box{
+        margin-top: 88px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .card-box{
+       
+        height: 73px;
+        width: 81px;
+        margin-left: -4px;  
+    }
+    .div-box{
+        border: 1px solid white;
+    height: 19px;
+    width: 65px;
+    margin-top: -65px;
+    margin-left: 6px;
+    padding: 3px;
+    position: relative;
+    }
+    .para-text{
+        color: white;
+        font-size: 5.3px;
+        font-family: noto-sans;
+        text-align: center;
+    }
+    .div-check-box{
+        height: 19px;
+    width: 20px;
+    border: 1px solid white;
+    margin-top: 16px;
+    margin-left: 15px;
+    border-radius: 11px;
+    padding: 2px;
+    }
+}

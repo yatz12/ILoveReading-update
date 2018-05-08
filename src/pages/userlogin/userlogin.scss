@@ -1,0 +1,21 @@
+page-userlogin {
+.login-text{
+    font-weight: bolder;
+     font-size: 17px;
+}
+.foget-password{
+    color:red;text-align: right;
+}
+.login-text{
+    height: 50px;
+    margin-top: 19px;
+}
+.no-scroll .scroll-content{
+    overflow: hidden;
+}
+.scroll-content {
+    overflow: hidden;
+   margin-top: 0px !important;
+padding-bottom:0px !important;
+  }
+}

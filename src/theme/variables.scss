@@ -46,16 +46,28 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$popover-ios-width: 95%;
 
+.toolbar-title-ios {
+  font-family: "noto-sans-regular";
+}
 
+.toolbar-title-md {
+  font-family: "noto-sans-regular";
+}
 
+.toolbar-title-wp {
+  font-family:"noto-sans-regular";
+}
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$toolbar-ios-button-font-size:1.9rem;
 
-
-
-
+$popover-md-width: 95%;
+.toolbar-title-md {
+  font-family: "noto-sans-regular";
+}
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here

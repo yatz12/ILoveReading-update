@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ImagazinespagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title start >
+       iMagazines
+    </ion-title>
+
+    <div class="nav-bar-style" >
+      <img  class="nav-bar-img" src="assets/imgs/share.png" >
+      <img  class="nav-bar-img" src="assets/imgs/favorite.png">
+      <img  class="nav-bar-img" src="assets/imgs/comment.png">
+      <img  class="nav-bar-img" src="assets/imgs/search.png">
+      <img  menuToggle="right"  class="nav-bar-img" src="assets/imgs/menu.png">
+    </div>
+
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card class="card-style" *ngFor="let content of contents;let i=index" (click)="readmore(i)" >
+  <ion-card-title class="card-title">
+    {{content.title}}.
+  </ion-card-title>
+  <ion-card-content>
+<img src="{{content.image}}"  >
+<!-- <div class="text-box" >
+<p  class="text-pstyle" >Lorem Ipsum is simply dummy text..</p>
+</div> -->
+<p style="color: #b1b1b1;    margin-top: 10px;" >
+  </p> <p class="read-text" >Read More..</p>  
+</ion-card-content>
+</ion-card>
+<!-- <ion-card class="card-style">
+  <ion-card-title class="card-title">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </ion-card-title>
+  <ion-card-content>
+<img src="assets/imgs/abc.png" >
+<div class="text-box" >
+<p  class="text-pstyle" >Lorem Ipsum is simply dummy text..</p>
+</div>
+<p style="color: #b1b1b1;    margin-top: 10px;" >
+  Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit,
+   sed do eiusmod tempor incididunt 
+   ut labore </p> <p class="read-text" >Read More..</p>  
+</ion-card-content>
+</ion-card> -->
+</ion-content>

@@ -1,0 +1,84 @@
+<!--
+  Generated template for the SchooldetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+    <div style="margin-top: 26px;">
+        <p class="login-text" >School Details</p>
+        <p style="color: grey;margin-top: -42px;">to user existing account</p>
+      </div>
+      <form [formGroup]="validation">
+      <ion-list style="    margin-top: -14px;" >
+      
+          <ion-item>
+            <ion-label floating>School Name</ion-label>
+            <ion-input  type="text"   formControlName="SchoolName" 
+
+            [class.invalid]="!validation.controls.SchoolName.valid && (validation.controls.SchoolName.dirty|| submitAttempt)"
+                ></ion-input>
+            
+            
+            
+              </ion-item>
+            <p *ngIf="!validation.controls.SchoolName.valid && (validation.controls.SchoolName.dirty|| submitAttempt)" style="color:red ">*Please enter a valid School Name.</p>
+        
+          <ion-item>
+            <ion-label floating>School Address</ion-label>
+            <ion-input  type="text"   formControlName="SchoolAddress" 
+
+            [class.invalid]="!validation.controls.SchoolAddress.valid && (validation.controls.SchoolAddress.dirty|| submitAttempt)"
+                ></ion-input>
+            
+            
+            
+              </ion-item>
+            <p *ngIf="!validation.controls.SchoolAddress.valid && (validation.controls.SchoolAddress.dirty|| submitAttempt)" style="color:red ">*Please enter a valid School Address.</p>
+          <ion-item>
+              <ion-label floating>City</ion-label>
+              <ion-input  type="text"   formControlName="City" 
+
+            [class.invalid]="!validation.controls.City.valid && (validation.controls.City.dirty|| submitAttempt)"
+                ></ion-input>
+            
+            
+            
+              </ion-item>
+            <p *ngIf="!validation.controls.City.valid && (validation.controls.City.dirty|| submitAttempt)" style="color:red ">*Please enter a valid City Name.</p>
+          
+            <ion-item>
+              <ion-label floating>State</ion-label>
+              <ion-input  type="text"   formControlName="State" 
+
+              [class.invalid]="!validation.controls.State.valid && (validation.controls.State.dirty|| submitAttempt)"
+                  ></ion-input>
+              
+              
+              
+                </ion-item>
+              <p *ngIf="!validation.controls.State.valid && (validation.controls.State.dirty|| submitAttempt)" style="color:red ">*Please enter a valid State Name.</p>
+            
+            <!-- <ion-item>
+                <ion-label floating>Country</ion-label>
+                <ion-input  type="text"   formControlName="Country" 
+                [class.invalid]="!validation.controls.Country.valid && (validation.controls.Country.dirty|| submitAttempt)"
+                ></ion-input>
+                 </ion-item> -->
+            <!-- <p *ngIf="!validation.controls.Country.valid && (validation.controls.Country.dirty|| submitAttempt)" style="color:red ">*Please enter a valid Country Name.</p> -->
+          
+        
+        </ion-list>
+      </form>
+      <ion-searchbar (ionInput)="getItems($event)" placeholder="Country"  [(ngModel)] = "searchModel"     ></ion-searchbar>
+                <ion-list *ngIf="countryactive==true">
+          
+                  <ion-item *ngFor="let item of items"  (click)="getcountry(item)" >
+                    {{ item }}
+                  </ion-item>
+                </ion-list>
+      <button [disabled]="!validation.valid" class="login-text" ion-button full color="danger" (click)="navigatetochilddetail()">Save</button>
+</ion-content>
