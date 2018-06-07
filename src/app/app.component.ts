@@ -36,13 +36,22 @@ import{TeacherprofilepPage}from'../pages/teacherprofilep/teacherprofilep'
 import{TestdemoPage}from'../pages/testdemo/testdemo'
 import{DailypostmagzinecontentPage}from'../pages/dailypostmagzinecontent/dailypostmagzinecontent'
 import { Events } from 'ionic-angular';
+import{CommentsilrPage}from'../pages/commentsilr/commentsilr'
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import{SavefavouritePage}from'../pages/savefavourite/savefavourite';
+
+import{TeacherrenewPage}from'../pages/teacherrenew/teacherrenew';
+import{TeachersubscribePage}from'../pages/teachersubscribe/teachersubscribe';
+import{OurvoicePage}from'../pages/ourvoice/ourvoice';
+import{TexttypepagePage}from'../pages/texttypepage/texttypepage';
+import{NatureofcontentPage}from'../pages/natureofcontent/natureofcontent';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav)nav:Nav
-  rootPage:any =HomePage ;
+  rootPage:any =HomePage ;  UpImgUsr:any; Usremails:any; Usrname:any; UsrExpDate:any; UsrSubStatus:any;
   pages: Array<{title: string, component: any,logo:string}>;
   pages1: Array<{title: string, component: any,logo:string,color:string,type:string}>;
   constructor(public events: Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -58,11 +67,11 @@ export class MyApp {
       
       {title:'Survey',component:SurveyPage,logo:'assets/imgs/bar-graph-with-a-cross.png'},
       { title: 'Contest', component:ContestPage, logo:'assets/imgs/trophy.png'},
-      {title:'Refferal Programme',component:TermsandconditionsPage,logo:'assets/imgs/amonestation.png'},
-      { title: 'About', component:DashboardPage, logo:'assets/imgs/care-about-planet.png'},
-      { title: 'Report Problem', component:DashboardPage, logo:'assets/imgs/newspaper.png'},
-      {title:'TermsAndConditions',component:TermsandconditionsPage,logo:'assets/imgs/lock.png'}
-   
+      {title:'Refferal Programme',component:RefferalPage,logo:'assets/imgs/amonestation.png'},
+      { title: 'About', component:ContactUsPage, logo:'assets/imgs/care-about-planet.png'},
+      { title: 'Loyality Points', component:LoyalityPage, logo:'assets/imgs/newspaper.png'},
+      // {title:'TermsAndConditions',component:TermsandconditionsPage,logo:'assets/imgs/lock.png'}
+     
     
     ];
 
@@ -70,26 +79,51 @@ export class MyApp {
       {type:'0',color:'#f53d3d', title: 'GROUPS', component:DailypostmagzinecontentPage, logo:'assets/imgs/icons/group.png'},
       {type:'0',color:'#222',title:'EVENTS',component:DailypostmagzinecontentPage,logo:'assets/imgs/icons/calendar-icon.png'},
       
-      {type:'0',color:'#6B407F',title:'NATURE OF CONTENT',component:DailypostmagzinecontentPage,logo:'assets/imgs/icons/design.png'},
-      {type:'0',color:'#69BAAE', title: 'TEXT TYPE', component:DailypostmagzinecontentPage, logo:'assets/imgs/icons/documents-button.png'},
+      {type:'0',color:'#6B407F',title:'NATURE OF CONTENT',component:NatureofcontentPage,logo:'assets/imgs/icons/design.png'},
+      {type:'0',color:'#69BAAE', title: 'TEXT TYPE', component:TexttypepagePage, logo:'assets/imgs/icons/documents-button.png'},
       {type:'3',color:'#69BAAE', title: 'QUOTE OF THE DAY', component:DailypostmagzinecontentPage, logo:'assets/imgs/icons/tree-of-dots-foliage.png'},
      
       {type:'1',color:'#6B407F',title:'WORD OF THE DAY',component:DailypostmagzinecontentPage,logo:'assets/imgs/icons/browser.png'},
       {type:'2',color:'#8599A7', title: 'IDOM OF THE DAY', component:DailypostmagzinecontentPage, logo:'assets/imgs/icons/i.png'},
-      {type:'0',color:'#9B92AE', title: 'SAVE FAVOURITE', component:DailypostmagzinecontentPage, logo:'assets/imgs/icons/favorite-heart-button.png'},
-      {type:'0',color:'#9B583A',title:'OUR VOICE',component:DailypostmagzinecontentPage,logo:'assets/imgs/icons/megaphone.png'},
-      {type:'0',color:'#CC212D',title:'POINTS EARNED',component:DailypostmagzinecontentPage,logo:'assets/imgs/icons/gift.png'}
+      {type:'0',color:'#9B92AE', title: 'SAVE FAVOURITE', component:SavefavouritePage, logo:'assets/imgs/icons/favorite-heart-button.png'},
+      {type:'0',color:'#9B583A',title:'OUR VOICE',component:OurvoicePage,logo:'assets/imgs/icons/megaphone.png'},
+      {type:'0',color:'#CC212D',title:'POINTS EARNED',component:LoyalityPage,logo:'assets/imgs/icons/gift.png'}
    
     
     ];
 
-    
+    this. FunEventUp();
 
+  }
+
+  
+  FunEventUp()  {  
+    this.events.subscribe('user:created', (user, time) => {  this.UpImgUsr=user;      });  
+    this.events.subscribe('usern:usrname', (user, time) => {  this.Usrname=user;      });  
+    this.events.subscribe('usere:email', (user, time) => {  this.Usremails=user;      });  
+    this.events.subscribe('userexp:expdate', (user, time) => {  this.UsrExpDate=user;      }); 
+    this.events.subscribe('subuser:substatus', (user, time) => {  this.UsrSubStatus=user;      }); 
+   }
+
+  navigatetoimagzine()
+  {
+    this.nav.setRoot(ImagazinespagePage)
   }
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    console.log("profile")
+    if(page.title =="My Profile"){
+      console.log("profile")
+      if(localStorage['usrrole'] == "2") {  this.nav.setRoot(TeacherprofilepPage);  return;    }
+      if(localStorage['usrrole'] == "1") {  this.nav.setRoot(TeacherprofilepPage); return;    }
+      if(localStorage['usrrole'] == "3") {  this.nav.setRoot(page.component); return;    }
+     
+    } 
+else{
+  this.nav.setRoot(page.component); 
+
+}
 
     
   
