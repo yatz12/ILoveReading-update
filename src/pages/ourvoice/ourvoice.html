@@ -1,0 +1,97 @@
+<!--
+  Generated template for the OurvoicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle="left" start>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title start >
+           iMagazines
+        </ion-title>
+        <div class="nav-bar-style" >
+          <img  menuToggle="right"  class="nav-bar-img" src="assets/imgs/menu.png">
+        </div>
+      </ion-navbar>
+</ion-header>
+
+ 
+<ion-content padding margin-top>
+<!-- <ion-card>
+  <ion-card-header *ngFor="let tittlelist of VoiceTittle">
+    {{ tittlelist }}
+  </ion-card-header>
+  <ion-card-content *ngFor="let tittlelist of VoiceTittle"></ion-card-content>
+</ion-card> -->
+<!-- <button ion-button full (click)="toggle()"></button>
+  <p class="tite">Lorem ipsum dolor sit amet elit.
+    
+  </p> -->
+  <div  style="margin-top: 59px;">
+  <div  style="margin-bottom: 17px;" *ngFor="let tittlelist of VoiceTittle;let i=index" >
+<div    (click)="toggle(i,tittlelist)" style=" background-color:#32beb3;
+height: 47px;
+display: block;
+width: 100%;
+float: left;
+ margin-bottom: 10px ">
+<div style="display: inline-block;
+width: 30%;
+float: left;
+margin-left: 11px;height: 47px;">
+<ion-label style="    width: 217px;">{{ tittlelist }}</ion-label>
+</div>
+
+
+<div style="display: inline-block;
+width: 66%;
+text-align: end;
+padding: 12px;" >
+<!-- <ion-icon  *ngIf="showbox==true"  style="font-size: 1.7em;" name="add-circle"></ion-icon> -->
+<img style="width: 22px;" src="assets/icon/23.png" >
+<div *ngIf="i==checkindex">
+<!-- <ion-icon *ngIf="showbox==false" name="remove-circle"></ion-icon> -->
+</div>
+</div>
+
+
+
+
+</div>
+
+<!-- <div class="x_{{i}}"   style="background-color:white;
+  height: 110px;"  >
+
+  <div style="display: block;
+  width: 100%;
+  border: 1px solid #aeb3b9;">
+    <div style="display: inline-block;width:30%;">
+    <img style="width:22px ;" src="assets/icon/23.png">
+    </div>
+    <div style="display: inline-block;width:68%;" >
+    <p> {{ tittlelist }}</p>
+ </div>
+  </div>
+  </div> -->
+
+<div id="x_{{i}}">
+  <div  class="x_{{i}}" >
+    <ion-list>
+      <ion-item *ngFor="let item of arravoicelist">
+        <ion-avatar item-start>
+          <img [src]="item.user_image">
+        </ion-avatar>
+        <h2>{{ item.comment    }}</h2>
+        <p>By {{  item.user_name }}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>
+
+
+</div>
+</div>
+</ion-content>
